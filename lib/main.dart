@@ -19,18 +19,20 @@ class Home extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
       ),
-      body: Padding(
-        padding: EdgeInsets.all(0) ,
-        child: Center(
-          child: TextButton.icon(
-            onPressed: () {},
-            icon: Icon(Icons.email),
-            label: Text('Click me'),
-            style: ButtonStyle(
-              backgroundColor: MaterialStateColor.resolveWith((states) => Colors.yellow)
-            ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("hi hello"),
+          TextButton(onPressed: (){}, child: Text("Click me", style: TextStyle(color: Colors.white)), style: ButtonStyle(
+            backgroundColor: MaterialStateColor.resolveWith((states) => Colors.yellow)
+          ),),
+          Container(
+            child: Text("Small conatiner"),
+            padding: EdgeInsets.all(20.0),
+            color: Colors.red,
           )
-        ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: const Text("Clcik"),
