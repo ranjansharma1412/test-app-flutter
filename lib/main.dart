@@ -19,16 +19,17 @@ class Home extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(20) ,
+      body: Padding(
+        padding: EdgeInsets.all(0) ,
         child: Center(
-          child: Text(
-            "This is amazing framework! I like this",
-            style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'RubikDoodleShadow'),
-          ),
+          child: TextButton.icon(
+            onPressed: () {},
+            icon: Icon(Icons.email),
+            label: Text('Click me'),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateColor.resolveWith((states) => Colors.yellow)
+            ),
+          )
         ),
       ),
       floatingActionButton: FloatingActionButton(
